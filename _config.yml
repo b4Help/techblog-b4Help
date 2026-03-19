@@ -1,0 +1,44 @@
+title: b4Help's Tech Blog
+description: Code, tools, and tech insights
+url: "https://b4Help.github.io"
+baseurl: "/techblog-b4Help"
+
+theme: jekyll-theme-midnight
+
+author:
+  name: b4Help
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Pagination
+paginate: 5
+paginate_path: "/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+      author: "b4Help"
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
