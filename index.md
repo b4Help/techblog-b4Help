@@ -3,20 +3,29 @@ layout: default
 title: Home
 ---
 
-# Welcome to b4Help's Tech Blog
+<div class="post-list-header">
+  <h1>Tech <span>Insights</span></h1>
+  <p class="post-list-tagline">// code · tools · infrastructure · AI</p>
+</div>
 
-Code, tools, and tech insights — no fluff.
-
----
-
-## Latest Posts
-
-<ul>
+<ul class="post-list">
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      <span> — {{ post.date | date: "%B %d, %Y" }}</span>
-      <p>{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+      <a class="post-card" href="{{ post.url | prepend: site.baseurl }}">
+        <div class="post-card-meta">
+          <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+          {% if post.tags %}
+            <div class="post-tags">
+              {% for tag in post.tags %}
+                <span class="post-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+        <div class="post-card-title">{{ post.title }}</div>
+        <div class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 22 }}</div>
+        <span class="post-card-arrow">→</span>
+      </a>
     </li>
   {% endfor %}
 </ul>

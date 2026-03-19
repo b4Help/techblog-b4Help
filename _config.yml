@@ -3,7 +3,7 @@ description: Code, tools, and tech insights
 url: "https://b4Help.github.io"
 baseurl: "/techblog-b4Help"
 
-theme: jekyll-theme-midnight
+# Custom theme (see _layouts/ and assets/css/)
 
 author:
   name: b4Help
@@ -33,7 +33,7 @@ defaults:
       path: ""
       type: "posts"
     values:
-      layout: "default"
+      layout: "post"
       author: "b4Help"
 
 # Exclude from build
