@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "The AI Tsunami"
 date: 2026-03-19
 categories: [Technology, AI]
