@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "The Human-Centric Counter-Trend: Why Empathy is the New Gold in an AI-Dominated Workplace"
-date: 2026-01-01  # PLACEHOLDER - set real publish date and rename file YYYY-MM-DD-slug.md at upload
+date: 2026-06-17  # PLACEHOLDER - set real publish date and rename file YYYY-MM-DD-slug.md at upload
 description: "Why empathy has become the strategic differentiator for professional services firms deploying AI in 2026, and how to build it as a deliberate leadership skill."
 image: "/images/01_human_centric_empathy.png"
 categories: [AI, Future of Work]
