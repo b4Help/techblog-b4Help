@@ -1,7 +1,7 @@
 ﻿---
 layout: post
 title: "Empathy: The Human Edge in an AI-Driven Workplace"
-date: 2026-06-22
+date: 2026-06-17
 description: "Why empathy has become the strategic differentiator for professional services firms deploying AI in 2026, and how to build it as a deliberate leadership skill."
 image: "/images/01_human_centric_empathy.png"
 categories: [AI, Future of Work]
