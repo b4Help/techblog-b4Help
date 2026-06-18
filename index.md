@@ -4,7 +4,7 @@ title: Home
 ---
 
 <div class="post-list-header">
-  <h1>Tech <span>Insights</span></h1>
+  <h1>The <span>b4Help</span> Brief</h1>
   <p class="post-list-tagline">// code · tools · infrastructure · AI</p>
 </div>
 
