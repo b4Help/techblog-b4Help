@@ -52,7 +52,7 @@ Perhaps the most startling aspect of this boom is how quickly it's infiltrating 
 
 ## The Growth More Than Any Other Tech Boom
 
-The history of technology is littered with booms—the dot-com bubble, the smartphone revolution, social media. However, many experts believe the current AI boom is different: larger in scale, faster in pace, and potentially more transformative.
+The history of technology is littered with booms: the dot-com bubble, the smartphone revolution, social media. However, many experts believe the current AI boom is different: larger in scale, faster in pace, and potentially more transformative.
 
 The **Breadth of Application** is the key. Unlike previous booms focused on specific platforms, AI is a foundational technology applicable across virtually every sector of the global economy. This growth is arguably the most astounding expansion we have witnessed in modern history.
 
