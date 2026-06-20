@@ -4,8 +4,9 @@ title: Home
 ---
 
 <div class="post-list-header">
-  <h1>The <span>b4Help</span> Brief</h1>
-  <p class="post-list-tagline">// code · tools · infrastructure · AI</p>
+  <span class="eyebrow">b4Help Blog</span>
+  <h1>Practical notes on <span class="grad-text">AI that works</span>.</h1>
+  <p class="post-list-tagline">Real-world AI, automation, and security for small &amp; mid-sized businesses — from 25+ years in IT.</p>
 </div>
 
 <ul class="post-list">

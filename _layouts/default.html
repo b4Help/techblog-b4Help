@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% seo %}
+  <link rel="icon" type="image/png" href="{{ '/images/b4help_icon.png' | relative_url }}" />
+  <link rel="apple-touch-icon" href="{{ '/images/b4help_icon.png' | relative_url }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 </head>
 <body>
@@ -14,8 +16,8 @@
   <header class="site-header">
     <div class="container">
       <a href="{{ '/' | relative_url }}" class="logo">
-        <span class="logo-bracket">&lt;</span>b4Help<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span>
-        <span class="logo-sub">AI Tech Blog</span>
+        <img src="{{ '/images/b4help_logo_light_trans.png' | relative_url }}" alt="b4Help" class="logo-img" />
+        <span class="logo-sub">Blog</span>
       </a>
       <nav class="site-nav">
         <a href="{{ '/' | relative_url }}" class="nav-link">Posts</a>
@@ -34,8 +36,8 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-inner">
-        <span class="footer-logo"><span class="logo-bracket">&lt;</span>b4Help<span class="logo-slash">/</span><span class="logo-bracket">&gt;</span></span>
-        <span class="footer-copy">© {{ site.time | date: '%Y' }} b4Help. All rights reserved.</span>
+        <img src="{{ '/images/b4help_logo_light_trans.png' | relative_url }}" alt="b4Help" class="footer-logo-img" />
+        <span class="footer-copy">© {{ site.time | date: '%Y' }} b4Help · AI Consulting · From Infrastructure to Intelligence.</span>
         <a href="https://b4help.com" class="footer-link" target="_blank" rel="noopener">b4help.com ↗</a>
       </div>
     </div>
