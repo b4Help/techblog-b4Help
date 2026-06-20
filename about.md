@@ -8,11 +8,11 @@ permalink: /about/
 
 # About b4Help
 
-Hi, I'm **Brian Franzen** — the consultant behind **b4Help**. For 25+ years I've worked in IT and security, and today I help small and mid-sized businesses use AI to save hours every week and cut costs — *without* risking their data.
+We're **b4Help** — practical, secure AI consulting for small and mid-sized businesses. With 25+ years in IT and security behind us, we help teams use AI to save hours every week and cut costs — *without* risking their data.
 
-My tagline says it best: **From Infrastructure to Intelligence.** b4Help bridges traditional IT with emerging technology, so the AI you adopt is practical, secure, and actually serves your business goals — not the other way around.
+Our tagline says it best: **From Infrastructure to Intelligence.** We bridge traditional IT with emerging technology, so the AI you adopt is practical, secure, and actually serves your business goals — not the other way around.
 
-## What I do
+## What we do
 
 - **AI Readiness Audits** — a clear-eyed look at where AI can save you real time
 - **Managed Automation** — busywork like client intake, invoice follow-ups, and reporting running on its own
@@ -20,7 +20,7 @@ My tagline says it best: **From Infrastructure to Intelligence.** b4Help bridges
 - **Training & Policy** — so your team actually uses what we build, safely
 - **PortCRM** — a portable, offline-capable CRM for businesses that need their data to stay put
 
-I work on-site across **Massachusetts** and remotely **nationwide**, with PCI-, HIPAA-, and PII-compliant processes — a good fit for law firms, accounting practices, and any team handling sensitive information.
+We work on-site across **Massachusetts** and remotely **nationwide**, with PCI-, HIPAA-, and PII-compliant processes — a good fit for law firms, accounting practices, and any team handling sensitive information.
 
 ## By the numbers
 
@@ -31,7 +31,7 @@ I work on-site across **Massachusetts** and remotely **nationwide**, with PCI-, 
 
 ## About this blog
 
-This is where I share what actually works: practical AI, automation, and security notes from real client projects. No hype, no jargon — just the stuff that saves you hours and keeps your data safe.
+This is where we share what actually works: practical AI, automation, and security notes from real client projects. No hype, no jargon — just the stuff that saves you hours and keeps your data safe.
 
 ---
 
