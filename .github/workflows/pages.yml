@@ -1,0 +1,25 @@
+# Blog auto-publish: install
+
+Builds and deploys the blog every day at 06:37 Eastern, on every push to `main`, and on demand. A post dated Monday goes live Monday morning with no manual commit.
+
+## Why this shape
+
+- **Jekyll hides posts dated after the build.** The old setup only rebuilt when someone pushed, so dated posts stayed invisible until a manual "Trigger Pages rebuild" commit. A daily scheduled build fixes that.
+- **GitHub disables scheduled workflows in a public repo after 60 days with no repository activity** ([GitHub docs, schedule event](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)). The post calendar runs 106 days, so a plain schedule would stop around mid-November. The `keepalive` job commits a one-line timestamp only when the newest commit is 50+ days old.
+- **Commits made with `GITHUB_TOKEN` do not start new workflow runs** (same GitHub docs page), so the keepalive commit cannot trigger a build loop.
+- Build steps and action versions come from GitHub's official `jekyll-gh-pages.yml` starter workflow, fetched 09/13/2026.
+
+## Steps (one time)
+
+1. **Settings > Pages > Build and deployment > Source: select "GitHub Actions".** The repo currently deploys from a branch. Skip this and the deploy job fails.
+2. Add `.github/workflows/pages.yml` from this folder to the repo at the same path, on `main`.
+3. Push. The push itself runs the first build. Watch it under the **Actions** tab.
+4. Confirm the blog still loads at https://b4help.github.io/techblog-b4Help/.
+
+## If something fails
+
+- **Deploy job fails with a Pages or environment error:** step 1 was skipped or did not save.
+- **Keepalive job fails with a 403 on push** (only possible once the repo has been quiet 50+ days): set **Settings > Actions > General > Workflow permissions** to **Read and write permissions**.
+- **Need a post live right now:** Actions tab > "Build and deploy blog" > **Run workflow**.
+
+The build uses GitHub's own Pages Jekyll environment, which ignores the repo `Gemfile`. Classic branch deploys ignore it too, so the site renders the same as today.
