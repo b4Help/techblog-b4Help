@@ -1,25 +1,77 @@
-# Blog auto-publish: install
+# Builds and deploys the Jekyll blog to GitHub Pages.
+# Jekyll only publishes posts dated on or before build time, so a daily
+# scheduled build publishes each dated post on its day with no manual commit.
+name: Build and deploy blog
 
-Builds and deploys the blog every day at 06:37 Eastern, on every push to `main`, and on demand. A post dated Monday goes live Monday morning with no manual commit.
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 10:37 UTC = 06:37 EDT / 05:37 EST. Off the top of the hour, when GitHub
+    # delays scheduled runs under load.
+    - cron: "37 10 * * *"
+  workflow_dispatch:
 
-## Why this shape
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
-- **Jekyll hides posts dated after the build.** The old setup only rebuilt when someone pushed, so dated posts stayed invisible until a manual "Trigger Pages rebuild" commit. A daily scheduled build fixes that.
-- **GitHub disables scheduled workflows in a public repo after 60 days with no repository activity** ([GitHub docs, schedule event](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows)). The post calendar runs 106 days, so a plain schedule would stop around mid-November. The `keepalive` job commits a one-line timestamp only when the newest commit is 50+ days old.
-- **Commits made with `GITHUB_TOKEN` do not start new workflow runs** (same GitHub docs page), so the keepalive commit cannot trigger a build loop.
-- Build steps and action versions come from GitHub's official `jekyll-gh-pages.yml` starter workflow, fetched 09/13/2026.
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
 
-## Steps (one time)
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
 
-1. **Settings > Pages > Build and deployment > Source: select "GitHub Actions".** The repo currently deploys from a branch. Skip this and the deploy job fails.
-2. Add `.github/workflows/pages.yml` from this folder to the repo at the same path, on `main`.
-3. Push. The push itself runs the first build. Watch it under the **Actions** tab.
-4. Confirm the blog still loads at https://b4help.github.io/techblog-b4Help/.
-
-## If something fails
-
-- **Deploy job fails with a Pages or environment error:** step 1 was skipped or did not save.
-- **Keepalive job fails with a 403 on push** (only possible once the repo has been quiet 50+ days): set **Settings > Actions > General > Workflow permissions** to **Read and write permissions**.
-- **Need a post live right now:** Actions tab > "Build and deploy blog" > **Run workflow**.
-
-The build uses GitHub's own Pages Jekyll environment, which ignores the repo `Gemfile`. Classic branch deploys ignore it too, so the site renders the same as today.
+  # GitHub disables scheduled workflows in a public repo after 60 days with no
+  # repository activity. When the newest commit is 50+ days old, this job makes
+  # a one-line commit so the daily schedule keeps running. Commits made with
+  # GITHUB_TOKEN do not trigger new workflow runs, so this cannot loop.
+  keepalive:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Commit keepalive if repo is going quiet
+        run: |
+          last=$(git log -1 --format=%ct)
+          age_days=$(( ( $(date +%s) - last ) / 86400 ))
+          echo "Newest commit is ${age_days} days old"
+          if [ "$age_days" -lt 50 ]; then
+            echo "Recent activity, no keepalive needed"
+            exit 0
+          fi
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > .github/keepalive
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/keepalive
+          git commit -m "Keepalive: keep scheduled blog builds enabled"
+          git push
