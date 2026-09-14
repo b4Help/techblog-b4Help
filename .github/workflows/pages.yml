@@ -7,9 +7,12 @@ on:
   push:
     branches: [main]
   schedule:
-    # 10:37 UTC = 06:37 EDT / 05:37 EST. Off the top of the hour, when GitHub
-    # delays scheduled runs under load.
-    - cron: "37 10 * * *"
+    # Three runs a day. GitHub can delay or drop scheduled jobs under load
+    # (it did on 09/14/2026), so the later runs catch a dropped one. Builds
+    # are idempotent, so extra runs cost nothing. All off the top of the hour.
+    - cron: "37 10 * * *"   # 06:37 EDT / 05:37 EST
+    - cron: "23 13 * * *"   # 09:23 EDT / 08:23 EST
+    - cron: "41 17 * * *"   # 13:41 EDT / 12:41 EST
   workflow_dispatch:
 
 concurrency:
