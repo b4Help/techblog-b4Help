@@ -1,5 +1,5 @@
 title: b4Help's Tech Blog
-description: Code, tools, and tech insights
+description: Technology strategy and practical AI for small and mid-sized businesses, from the b4Help fractional CTO practice.
 url: "https://b4Help.github.io"
 baseurl: "/techblog-b4Help"
 
@@ -17,6 +17,7 @@ permalink: /:year/:month/:day/:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Pagination
 paginate: 5

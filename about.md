@@ -8,33 +8,33 @@ permalink: /about/
 
 # About b4Help
 
-We're **b4Help**: practical, secure AI consulting for small and mid-sized businesses. With 25+ years in IT and security behind us, we help teams use AI to save hours every week and cut costs, without risking their data.
+b4Help is my fractional CTO practice. I give small and mid-sized businesses senior technology leadership part time, and I implement the AI I recommend.
 
-Our tagline says it best: **From Infrastructure to Intelligence.** We bridge traditional IT with emerging technology, so the AI you adopt is practical, secure, and actually serves your business goals, not the other way around.
+I've worked in IT and security for more than 25 years. I work with firms that hold information they can't hand to a third party, such as law firms and accounting practices, and for them I deploy private AI that runs on their own hardware so client files stay on their network.
 
-## What we do
+## What I do
 
-- **AI Readiness Audits**: a clear-eyed look at where AI can save you real time
-- **Managed Automation**: busywork like client intake, invoice follow-ups, and reporting running on its own
-- **Secure & Local AI**: deployments where *your data never has to leave the office*
-- **Training & Policy**: so your team actually uses what we build, safely
-- **PortCRM**: a portable, offline-capable CRM for businesses that need their data to stay put
+- **Technology leadership:** a roadmap, infrastructure and vendor decisions, and oversight of the developers and providers you pay today.
+- **AI strategy and implementation:** where AI saves your firm money, with private, on-premise deployment where the data is sensitive.
+- **Assessments:** an AI Readiness Assessment or a full Technology and AI Assessment, each ending in a written, prioritized plan.
+- **Compliance-aware planning:** I have worked on PCI, HIPAA and PII compliance requirements, so security and data handling sit in the plan from the first conversation.
 
-We work on-site across **Massachusetts** and remotely **nationwide**, with PCI-, HIPAA-, and PII-compliant processes. That's a good fit for law firms, accounting practices, and any team handling sensitive information.
+## Where I work
 
-## By the numbers
+On-site across Massachusetts, and remote for businesses anywhere in the United States.
 
-- **25+ years** in IT & security
-- **500+ projects** delivered
-- **100+ clients** served
-- **99.9% uptime** SLA
+## What I've built
+
+- A document AI system that runs offline from a USB drive, answers questions about your files with citations to the source, and makes no network requests
+- PortCRM, a portable CRM that keeps client data encrypted on your own devices
+- A local, multi-model AI inference stack, and a virtualization environment I have run since around 2012
 
 ## About this blog
 
-This is where we share what actually works: practical AI, automation, and security notes from real client projects. No hype, no jargon. Just the stuff that saves you hours and keeps your data safe.
+Each Monday I publish one post on the technology calls a firm has to make without a CTO on staff, from private AI to software spend.
 
 ---
 
-Ready to put AI to work, safely? [Book a free AI Discovery Call at b4help.com →](https://b4help.com)
+My pricing is published at [b4help.com](https://b4help.com). When you're ready to talk, [book a free 30-minute call](https://cal.com/brianfranzen/first30min).
 
 </div>
