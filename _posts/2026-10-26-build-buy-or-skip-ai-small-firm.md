@@ -47,7 +47,7 @@ Read two things before you sign: where the vendor stores your files, and whether
 
 Some firms can't send their files anywhere. For them I build AI that runs on hardware they control. My own document AI system runs from a USB drive with no network connection. It reads PDFs, PowerPoint decks, spreadsheets and CSV files, answers questions with a citation to the source file, and runs on a machine with 4GB of RAM.
 
-Private builds carry costs you need to see up front. Someone has to size the hardware and pick a model that fits it. On my own inference server, a Mac Mini with 24GB of memory, a 27-billion-parameter model with a 25,000-token context used 23GB of that 24GB. On my eight-test benchmark, a 9-billion-parameter model beat it and ran 3.2 times faster. Test candidate models on your own hardware and your own tasks before you pay for anything bigger.
+Private builds carry costs you need to see up front. Someone has to size the hardware and pick a model that fits it. On my own inference server, a Mac Mini with 24GB of memory, a 27-billion-parameter model with a 25,000-token context used 23GB of that 24GB. On my 53-item test battery, a 9-billion-parameter model matched its accuracy and ran 3.2 times faster. Test candidate models on your own hardware and your own tasks before you pay for anything bigger.
 
 ## Skipping counts as a decision
 

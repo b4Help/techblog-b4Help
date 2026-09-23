@@ -22,7 +22,7 @@ The number shows where small businesses find value today: AI helping a person wh
 
 ## Bigger doesn't mean better
 
-I learned a version of this lesson on my own hardware. I run a local inference stack on a Mac Mini with 24GB of memory, and I benchmark models against a fixed set of eight tests before I trust them with anything. A 27-billion-parameter model loaded with a 25,000-token context consumed 23GB of that 24GB. A 9-billion-parameter model beat it on my benchmark and ran 3.2 times faster.
+I learned a version of this lesson on my own hardware. I run a local inference stack on a Mac Mini with 24GB of memory, and I benchmark models against a fixed 53-item test battery before I trust them with anything. A 27-billion-parameter model loaded with a 25,000-token context consumed 23GB of that 24GB. A 9-billion-parameter model matched its accuracy on that battery and ran 3.2 times faster.
 
 The bigger, more capable-sounding option lost to the smaller one that fit the job. Agents follow the same pattern. The broadest tool in the demo can lose to a narrow one that does a single task well.
 

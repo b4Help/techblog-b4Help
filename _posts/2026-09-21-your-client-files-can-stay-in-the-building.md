@@ -32,7 +32,7 @@ The citations do more for a firm than extra model size would. A partner who can 
 
 I test models on a Mac Mini with 24GB of memory before I recommend them to anyone. A 27-billion-parameter model working with a 25,000-token context used 23GB of that 24GB. The model weights account for part of that number. The working memory for a long document stacks on top of the weights, and on that machine it left 1GB free.
 
-A 9-billion-parameter model did better on the same hardware. It passed all eight tests in my benchmark where the 27B passed six, and it ran 3.2 times faster.
+A 9-billion-parameter model did better on the same hardware. On my 53-item test battery it matched the 27B's accuracy, ran 3.2 times faster, and left memory to spare.
 
 For budgeting, those results mean a thirty-person firm can run private AI for document work without a data center. You need a model sized to the job and a machine sized to the model.
 
